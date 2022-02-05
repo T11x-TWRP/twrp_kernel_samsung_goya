@@ -450,6 +450,12 @@ config TZ_HYPERVISOR
 	  enabled, the kernel will run under non-secure state and access
 	  secure resources via TZLC (TrustZone light calling).
 
+config RECOVERY_KERNEL
+        bool "reset reboot-recovery flag on each reboot"
+        help
+          Build a kernel that, by default, resets reboot-recovery flag
+          and prevent us to be stuck on recovery (useful for custom recoveries)
+		  
 config BOOST_SUPPORT
 	bool "support touch boost feature"
 	help
